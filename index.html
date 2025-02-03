@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Reaction Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="controls-container">
+        <div id="controls">
+            <div class="static-border button-border">
+                <button id="restart-button">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/restart--v1.png" alt="Reset" id="reset-icon" />
+                </button>
+            </div>
+            <div class="static-border button-border">
+                <button id="settings-button">⚙️</button>
+            </div>
+        </div>
+        <div id="info-box">
+            <div class="static-border info-border">
+                <div id="score">Score: 0</div>
+            </div>
+            <div class="static-border info-border">
+                <div id="timer">Time: 30</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="static-border">
+        <div id="game-container">
+            <div id="dot"></div>
+        </div>
+    </div>
+
+    <div id="message-container" class="hidden">
+        <h2>Time's Up!</h2>
+        <p>Your final score: <span id="final-score">0</span></p>
+        <button id="play-again">Play Again</button>
+    </div>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h3>Settings</h3>
+            <label for="dot-color">Dot Color:</label>
+            <input type="color" id="dot-color" value="#000000">
+            <br><br>
+            <label for="bg-color">Background Color:</label>
+            <input type="color" id="bg-color" value="#808080">
+            <br><br>
+            <label for="game-time">Custom Time (seconds):</label>
+            <input type="number" id="game-time" min="10" max="300" value="30">
+            <br><br>
+            <label for="auto-start">Start Timer After Reset:</label>
+            <input type="checkbox" id="auto-start">
+            <div class="button-container">
+                <div class="static-border">
+                    <button id="save-settings">Save</button>
+                </div>
+                <div class="static-border">
+                    <button id="close-settings">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
