@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageContainer = document.getElementById("message-container");
     const finalScoreElement = document.getElementById("final-score");
     const playAgainButton = document.getElementById("play-again");
+    const dotColorInput = document.getElementById("dot-color");
+    const bgColorInput = document.getElementById("bg-color");
 
     let score = 0;
     let gameRunning = false;
@@ -91,6 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     settingsButton.addEventListener("click", function () {
         document.getElementById("settings-modal").style.display = "flex";
+    });
+
+    dotColorInput.addEventListener("change", function () {
+        dot.style.backgroundColor = dotColorInput.value;
+    });
+
+    bgColorInput.addEventListener("change", function () {
+        gameContainer.style.backgroundColor = bgColorInput.value;
     });
 
     randomPosition(); // Position the dot initially
