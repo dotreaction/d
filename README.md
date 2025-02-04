@@ -1,2 +1,3 @@
-# Dot-Reaction
-A game where you react to a dot in the amount of time you choose.
+# Dot Reaction
+A game where you respond to a dot within your chosen time.
+
