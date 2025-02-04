@@ -65,6 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
         scoreElement.textContent = `Score: 0`;
         timerElement.textContent = `Time: ${gameTime}`;
         messageContainer.style.display = "none";
+
+        // Start the timer if auto-start is checked
+        if (autoStartCheckbox.checked) {
+            gameRunning = true;
+            updateTimer();
+        }
     }
 
     dot.addEventListener("click", function () {
